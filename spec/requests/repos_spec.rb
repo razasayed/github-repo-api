@@ -53,4 +53,39 @@ RSpec.describe 'Repos API', type: :request do
             end
         end
     end
+
+    describe 'DELETE /repos/:id' do
+        context 'with valid repo name' do
+            before do
+                VCR.use_cassette("delete_repo_valid") do
+                    delete '/repos/testrepo'
+                end
+            end
+    
+            it 'returns http status code 204' do
+                expect(response).to have_http_status(204)
+            end
+    
+            it 'returns an empty response' do
+                expect(response.body).to be_empty
+            end 
+        end
+
+        context 'with invalid repo name' do
+            before do
+                VCR.use_cassette("delete_repo_invalid") do
+                    delete '/repos/testrepo123'
+                end
+            end
+    
+            it 'returns http status code 404' do
+                expect(response).to have_http_status(404)
+            end
+    
+            it 'returns error details' do
+                expect(json).not_to be_empty
+                expect(json['message']).to eq('Not Found')
+            end 
+        end
+    end
 end

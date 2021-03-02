@@ -7,6 +7,10 @@ class ReposController < ApplicationController
         json_response(GithubManager::RepoCreator.call(create_repo_params))
     end
 
+    def destroy
+        json_response(GithubManager::RepoDeleter.call(params[:id]))
+    end
+
     private
 
     def create_repo_params
