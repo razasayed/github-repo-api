@@ -138,4 +138,41 @@ RSpec.describe 'Repos API', type: :request do
         end
     end
 
+    describe 'PUT /repos/:id/topics' do
+        context 'with valid params' do
+            before do
+                VCR.use_cassette("update_repo_topics_valid_params") do
+                    put '/repos/myrepo/topics', :params => {:names => ['ruby', 'refactoring']} 
+                end
+            end
+
+            it 'returns http status code 200' do
+                expect(response).to have_http_status(200)
+            end
+
+            it 'returns the list of topics' do
+                expect(json['names']).to be_an_instance_of(Array)
+                expect(json['names']).to include("ruby")
+                expect(json['names']).to include("refactoring")
+            end
+        end
+
+        context 'with invalid params' do
+            before do
+                VCR.use_cassette("update_repo_topics_invalid_params") do
+                    put '/repos/myrepo/topics'
+                end
+            end
+
+            it 'returns http status code 422' do
+                expect(response).to have_http_status(422)
+            end
+
+            it 'returns error details' do
+                expect(json).not_to be_empty
+                expect(json['message']).to_not be_nil
+            end
+        end
+    end
+
 end

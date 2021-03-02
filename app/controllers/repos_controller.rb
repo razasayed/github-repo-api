@@ -19,6 +19,10 @@ class ReposController < ApplicationController
         json_response(GithubManager::RepoUpdater.call(params[:id], update_repo_params))
     end
 
+    def topics
+        json_response(GithubManager::RepoTopicsUpdater.call(params[:id], update_repo_topics_params))
+    end
+
     private
 
     def create_repo_params
@@ -27,5 +31,9 @@ class ReposController < ApplicationController
 
     def update_repo_params
         params.permit(:name, :description)
+    end
+
+    def update_repo_topics_params
+        params.permit(:names => [])
     end
 end

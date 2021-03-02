@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.github.com/repos/t03935924/myrepo/topics
+    body:
+      encoding: UTF-8
+      string: '{"names":["ruby","refactoring"]}'
+    headers:
+      Accept:
+      - application/vnd.github.mercy-preview+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic dDAzOTM1OTI0OjZjNGMyNGI4OTY4ZjUxZDRkOTg1MWY1OTQ2ZTVjNTQzYzE0M2FhOTY=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 02 Mar 2021 20:16:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"3aea923cc362dfa3e26d53aa55d9b0adbc78ed9d22f323439631c04aa149d85c"
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, delete_repo, gist, notifications, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - repo
+      X-Github-Media-Type:
+      - github.mercy-preview; format=json
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4999'
+      X-Ratelimit-Reset:
+      - '1614719794'
+      X-Ratelimit-Used:
+      - '1'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - DC7A:2517:65C12:7616D:603E9D22
+    body:
+      encoding: ASCII-8BIT
+      string: '{"names":["ruby","refactoring"]}'
+  recorded_at: Tue, 02 Mar 2021 20:16:34 GMT
+recorded_with: VCR 6.0.0
