@@ -1,0 +1,11 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+
+Style/Documentation:
+  Enabled: false
