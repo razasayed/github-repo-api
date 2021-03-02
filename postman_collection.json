@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "ff625f22-b1f0-484d-b6d7-ede6ba1c3cf3",
+		"name": "Github Repositories API",
+		"description": "This collection contains requests from the Github Repositories API (https://docs.github.com/en/rest/reference/repos) to perform the following tasks.\n\n* List down repositories from a user's account.\n\n* Create a repository.\n\n* Update repository name and description.\n\n* Update repository topics.\n\n* Enable automated security alerts on a repository.\n\n* Delete a repository.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "List User Repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/repos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repos"
+					]
+				},
+				"description": "API endpoint to list the repositories in the users account.\n> A successful request will result in a *HTTP 200* status code"
+			},
+			"response": [
+				{
+					"name": "List User Repos Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/repos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"308c6abc58b14d359d063d2a8a394924\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "82149a8a-2d5e-4af5-9ca1-de269b25dbef"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.369985"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 343929102,\n        \"node_id\": \"MDEwOlJlcG9zaXRvcnkzNDM5MjkxMDI=\",\n        \"name\": \"testrepo\",\n        \"full_name\": \"t03935924/testrepo\",\n        \"private\": false,\n        \"owner\": {\n            \"login\": \"t03935924\",\n            \"id\": 79847684,\n            \"node_id\": \"MDQ6VXNlcjc5ODQ3Njg0\",\n            \"avatar_url\": \"https://avatars.githubusercontent.com/u/79847684?v=4\",\n            \"gravatar_id\": \"\",\n            \"url\": \"https://api.github.com/users/t03935924\",\n            \"html_url\": \"https://github.com/t03935924\",\n            \"followers_url\": \"https://api.github.com/users/t03935924/followers\",\n            \"following_url\": \"https://api.github.com/users/t03935924/following{/other_user}\",\n            \"gists_url\": \"https://api.github.com/users/t03935924/gists{/gist_id}\",\n            \"starred_url\": \"https://api.github.com/users/t03935924/starred{/owner}{/repo}\",\n            \"subscriptions_url\": \"https://api.github.com/users/t03935924/subscriptions\",\n            \"organizations_url\": \"https://api.github.com/users/t03935924/orgs\",\n            \"repos_url\": \"https://api.github.com/users/t03935924/repos\",\n            \"events_url\": \"https://api.github.com/users/t03935924/events{/privacy}\",\n            \"received_events_url\": \"https://api.github.com/users/t03935924/received_events\",\n            \"type\": \"User\",\n            \"site_admin\": false\n        },\n        \"html_url\": \"https://github.com/t03935924/testrepo\",\n        \"description\": null,\n        \"fork\": false,\n        \"url\": \"https://api.github.com/repos/t03935924/testrepo\",\n        \"forks_url\": \"https://api.github.com/repos/t03935924/testrepo/forks\",\n        \"keys_url\": \"https://api.github.com/repos/t03935924/testrepo/keys{/key_id}\",\n        \"collaborators_url\": \"https://api.github.com/repos/t03935924/testrepo/collaborators{/collaborator}\",\n        \"teams_url\": \"https://api.github.com/repos/t03935924/testrepo/teams\",\n        \"hooks_url\": \"https://api.github.com/repos/t03935924/testrepo/hooks\",\n        \"issue_events_url\": \"https://api.github.com/repos/t03935924/testrepo/issues/events{/number}\",\n        \"events_url\": \"https://api.github.com/repos/t03935924/testrepo/events\",\n        \"assignees_url\": \"https://api.github.com/repos/t03935924/testrepo/assignees{/user}\",\n        \"branches_url\": \"https://api.github.com/repos/t03935924/testrepo/branches{/branch}\",\n        \"tags_url\": \"https://api.github.com/repos/t03935924/testrepo/tags\",\n        \"blobs_url\": \"https://api.github.com/repos/t03935924/testrepo/git/blobs{/sha}\",\n        \"git_tags_url\": \"https://api.github.com/repos/t03935924/testrepo/git/tags{/sha}\",\n        \"git_refs_url\": \"https://api.github.com/repos/t03935924/testrepo/git/refs{/sha}\",\n        \"trees_url\": \"https://api.github.com/repos/t03935924/testrepo/git/trees{/sha}\",\n        \"statuses_url\": \"https://api.github.com/repos/t03935924/testrepo/statuses/{sha}\",\n        \"languages_url\": \"https://api.github.com/repos/t03935924/testrepo/languages\",\n        \"stargazers_url\": \"https://api.github.com/repos/t03935924/testrepo/stargazers\",\n        \"contributors_url\": \"https://api.github.com/repos/t03935924/testrepo/contributors\",\n        \"subscribers_url\": \"https://api.github.com/repos/t03935924/testrepo/subscribers\",\n        \"subscription_url\": \"https://api.github.com/repos/t03935924/testrepo/subscription\",\n        \"commits_url\": \"https://api.github.com/repos/t03935924/testrepo/commits{/sha}\",\n        \"git_commits_url\": \"https://api.github.com/repos/t03935924/testrepo/git/commits{/sha}\",\n        \"comments_url\": \"https://api.github.com/repos/t03935924/testrepo/comments{/number}\",\n        \"issue_comment_url\": \"https://api.github.com/repos/t03935924/testrepo/issues/comments{/number}\",\n        \"contents_url\": \"https://api.github.com/repos/t03935924/testrepo/contents/{+path}\",\n        \"compare_url\": \"https://api.github.com/repos/t03935924/testrepo/compare/{base}...{head}\",\n        \"merges_url\": \"https://api.github.com/repos/t03935924/testrepo/merges\",\n        \"archive_url\": \"https://api.github.com/repos/t03935924/testrepo/{archive_format}{/ref}\",\n        \"downloads_url\": \"https://api.github.com/repos/t03935924/testrepo/downloads\",\n        \"issues_url\": \"https://api.github.com/repos/t03935924/testrepo/issues{/number}\",\n        \"pulls_url\": \"https://api.github.com/repos/t03935924/testrepo/pulls{/number}\",\n        \"milestones_url\": \"https://api.github.com/repos/t03935924/testrepo/milestones{/number}\",\n        \"notifications_url\": \"https://api.github.com/repos/t03935924/testrepo/notifications{?since,all,participating}\",\n        \"labels_url\": \"https://api.github.com/repos/t03935924/testrepo/labels{/name}\",\n        \"releases_url\": \"https://api.github.com/repos/t03935924/testrepo/releases{/id}\",\n        \"deployments_url\": \"https://api.github.com/repos/t03935924/testrepo/deployments\",\n        \"created_at\": \"2021-03-02T22:22:12Z\",\n        \"updated_at\": \"2021-03-02T22:22:12Z\",\n        \"pushed_at\": \"2021-03-02T22:22:13Z\",\n        \"git_url\": \"git://github.com/t03935924/testrepo.git\",\n        \"ssh_url\": \"git@github.com:t03935924/testrepo.git\",\n        \"clone_url\": \"https://github.com/t03935924/testrepo.git\",\n        \"svn_url\": \"https://github.com/t03935924/testrepo\",\n        \"homepage\": null,\n        \"size\": 0,\n        \"stargazers_count\": 0,\n        \"watchers_count\": 0,\n        \"language\": null,\n        \"has_issues\": true,\n        \"has_projects\": true,\n        \"has_downloads\": true,\n        \"has_wiki\": true,\n        \"has_pages\": false,\n        \"forks_count\": 0,\n        \"mirror_url\": null,\n        \"archived\": false,\n        \"disabled\": false,\n        \"open_issues_count\": 0,\n        \"license\": null,\n        \"forks\": 0,\n        \"open_issues\": 0,\n        \"watchers\": 0,\n        \"default_branch\": \"main\",\n        \"permissions\": {\n            \"admin\": true,\n            \"push\": true,\n            \"pull\": true\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create a repo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"my-secret-project\",\n    \"private\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/repos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repos"
+					]
+				},
+				"description": "API endpoint to create a new repository.\n> A successful request will result in a *HTTP 201* status code\n\n> A bad request will result in *HTTP 422* status code"
+			},
+			"response": [
+				{
+					"name": "Create Repo Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"my-secret-project\",\n    \"private\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/repos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repos"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f5a61513c1e6841e96e7f8e144ffd9a2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "05d82dc3-d1b9-4e31-a3bc-1fcd5269e6f7"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "1.860439"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 343933420,\n    \"node_id\": \"MDEwOlJlcG9zaXRvcnkzNDM5MzM0MjA=\",\n    \"name\": \"my-secret-project\",\n    \"full_name\": \"t03935924/my-secret-project\",\n    \"private\": true,\n    \"owner\": {\n        \"login\": \"t03935924\",\n        \"id\": 79847684,\n        \"node_id\": \"MDQ6VXNlcjc5ODQ3Njg0\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/79847684?v=4\",\n        \"gravatar_id\": \"\",\n        \"url\": \"https://api.github.com/users/t03935924\",\n        \"html_url\": \"https://github.com/t03935924\",\n        \"followers_url\": \"https://api.github.com/users/t03935924/followers\",\n        \"following_url\": \"https://api.github.com/users/t03935924/following{/other_user}\",\n        \"gists_url\": \"https://api.github.com/users/t03935924/gists{/gist_id}\",\n        \"starred_url\": \"https://api.github.com/users/t03935924/starred{/owner}{/repo}\",\n        \"subscriptions_url\": \"https://api.github.com/users/t03935924/subscriptions\",\n        \"organizations_url\": \"https://api.github.com/users/t03935924/orgs\",\n        \"repos_url\": \"https://api.github.com/users/t03935924/repos\",\n        \"events_url\": \"https://api.github.com/users/t03935924/events{/privacy}\",\n        \"received_events_url\": \"https://api.github.com/users/t03935924/received_events\",\n        \"type\": \"User\",\n        \"site_admin\": false\n    },\n    \"html_url\": \"https://github.com/t03935924/my-secret-project\",\n    \"description\": null,\n    \"fork\": false,\n    \"url\": \"https://api.github.com/repos/t03935924/my-secret-project\",\n    \"forks_url\": \"https://api.github.com/repos/t03935924/my-secret-project/forks\",\n    \"keys_url\": \"https://api.github.com/repos/t03935924/my-secret-project/keys{/key_id}\",\n    \"collaborators_url\": \"https://api.github.com/repos/t03935924/my-secret-project/collaborators{/collaborator}\",\n    \"teams_url\": \"https://api.github.com/repos/t03935924/my-secret-project/teams\",\n    \"hooks_url\": \"https://api.github.com/repos/t03935924/my-secret-project/hooks\",\n    \"issue_events_url\": \"https://api.github.com/repos/t03935924/my-secret-project/issues/events{/number}\",\n    \"events_url\": \"https://api.github.com/repos/t03935924/my-secret-project/events\",\n    \"assignees_url\": \"https://api.github.com/repos/t03935924/my-secret-project/assignees{/user}\",\n    \"branches_url\": \"https://api.github.com/repos/t03935924/my-secret-project/branches{/branch}\",\n    \"tags_url\": \"https://api.github.com/repos/t03935924/my-secret-project/tags\",\n    \"blobs_url\": \"https://api.github.com/repos/t03935924/my-secret-project/git/blobs{/sha}\",\n    \"git_tags_url\": \"https://api.github.com/repos/t03935924/my-secret-project/git/tags{/sha}\",\n    \"git_refs_url\": \"https://api.github.com/repos/t03935924/my-secret-project/git/refs{/sha}\",\n    \"trees_url\": \"https://api.github.com/repos/t03935924/my-secret-project/git/trees{/sha}\",\n    \"statuses_url\": \"https://api.github.com/repos/t03935924/my-secret-project/statuses/{sha}\",\n    \"languages_url\": \"https://api.github.com/repos/t03935924/my-secret-project/languages\",\n    \"stargazers_url\": \"https://api.github.com/repos/t03935924/my-secret-project/stargazers\",\n    \"contributors_url\": \"https://api.github.com/repos/t03935924/my-secret-project/contributors\",\n    \"subscribers_url\": \"https://api.github.com/repos/t03935924/my-secret-project/subscribers\",\n    \"subscription_url\": \"https://api.github.com/repos/t03935924/my-secret-project/subscription\",\n    \"commits_url\": \"https://api.github.com/repos/t03935924/my-secret-project/commits{/sha}\",\n    \"git_commits_url\": \"https://api.github.com/repos/t03935924/my-secret-project/git/commits{/sha}\",\n    \"comments_url\": \"https://api.github.com/repos/t03935924/my-secret-project/comments{/number}\",\n    \"issue_comment_url\": \"https://api.github.com/repos/t03935924/my-secret-project/issues/comments{/number}\",\n    \"contents_url\": \"https://api.github.com/repos/t03935924/my-secret-project/contents/{+path}\",\n    \"compare_url\": \"https://api.github.com/repos/t03935924/my-secret-project/compare/{base}...{head}\",\n    \"merges_url\": \"https://api.github.com/repos/t03935924/my-secret-project/merges\",\n    \"archive_url\": \"https://api.github.com/repos/t03935924/my-secret-project/{archive_format}{/ref}\",\n    \"downloads_url\": \"https://api.github.com/repos/t03935924/my-secret-project/downloads\",\n    \"issues_url\": \"https://api.github.com/repos/t03935924/my-secret-project/issues{/number}\",\n    \"pulls_url\": \"https://api.github.com/repos/t03935924/my-secret-project/pulls{/number}\",\n    \"milestones_url\": \"https://api.github.com/repos/t03935924/my-secret-project/milestones{/number}\",\n    \"notifications_url\": \"https://api.github.com/repos/t03935924/my-secret-project/notifications{?since,all,participating}\",\n    \"labels_url\": \"https://api.github.com/repos/t03935924/my-secret-project/labels{/name}\",\n    \"releases_url\": \"https://api.github.com/repos/t03935924/my-secret-project/releases{/id}\",\n    \"deployments_url\": \"https://api.github.com/repos/t03935924/my-secret-project/deployments\",\n    \"created_at\": \"2021-03-02T22:43:55Z\",\n    \"updated_at\": \"2021-03-02T22:43:55Z\",\n    \"pushed_at\": \"2021-03-02T22:43:56Z\",\n    \"git_url\": \"git://github.com/t03935924/my-secret-project.git\",\n    \"ssh_url\": \"git@github.com:t03935924/my-secret-project.git\",\n    \"clone_url\": \"https://github.com/t03935924/my-secret-project.git\",\n    \"svn_url\": \"https://github.com/t03935924/my-secret-project\",\n    \"homepage\": null,\n    \"size\": 0,\n    \"stargazers_count\": 0,\n    \"watchers_count\": 0,\n    \"language\": null,\n    \"has_issues\": true,\n    \"has_projects\": true,\n    \"has_downloads\": true,\n    \"has_wiki\": true,\n    \"has_pages\": false,\n    \"forks_count\": 0,\n    \"mirror_url\": null,\n    \"archived\": false,\n    \"disabled\": false,\n    \"open_issues_count\": 0,\n    \"license\": null,\n    \"forks\": 0,\n    \"open_issues\": 0,\n    \"watchers\": 0,\n    \"default_branch\": \"main\",\n    \"permissions\": {\n        \"admin\": true,\n        \"push\": true,\n        \"pull\": true\n    },\n    \"allow_squash_merge\": true,\n    \"allow_merge_commit\": true,\n    \"allow_rebase_merge\": true,\n    \"delete_branch_on_merge\": false,\n    \"network_count\": 0,\n    \"subscribers_count\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Update repo name and description",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"myrepo\",\n    \"description\": \"this is a repo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/repos/testrepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repos",
+						"testrepo"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update repo name and description example",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"myrepo\",\n    \"description\": \"this is a repo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/repos/testrepo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repos",
+								"testrepo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"747e574befec5ec3b402083eea82526c\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "f2e8e09a-2958-4625-81e6-3260d91b730f"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.469785"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 343929102,\n    \"node_id\": \"MDEwOlJlcG9zaXRvcnkzNDM5MjkxMDI=\",\n    \"name\": \"myrepo\",\n    \"full_name\": \"t03935924/myrepo\",\n    \"private\": false,\n    \"owner\": {\n        \"login\": \"t03935924\",\n        \"id\": 79847684,\n        \"node_id\": \"MDQ6VXNlcjc5ODQ3Njg0\",\n        \"avatar_url\": \"https://avatars.githubusercontent.com/u/79847684?v=4\",\n        \"gravatar_id\": \"\",\n        \"url\": \"https://api.github.com/users/t03935924\",\n        \"html_url\": \"https://github.com/t03935924\",\n        \"followers_url\": \"https://api.github.com/users/t03935924/followers\",\n        \"following_url\": \"https://api.github.com/users/t03935924/following{/other_user}\",\n        \"gists_url\": \"https://api.github.com/users/t03935924/gists{/gist_id}\",\n        \"starred_url\": \"https://api.github.com/users/t03935924/starred{/owner}{/repo}\",\n        \"subscriptions_url\": \"https://api.github.com/users/t03935924/subscriptions\",\n        \"organizations_url\": \"https://api.github.com/users/t03935924/orgs\",\n        \"repos_url\": \"https://api.github.com/users/t03935924/repos\",\n        \"events_url\": \"https://api.github.com/users/t03935924/events{/privacy}\",\n        \"received_events_url\": \"https://api.github.com/users/t03935924/received_events\",\n        \"type\": \"User\",\n        \"site_admin\": false\n    },\n    \"html_url\": \"https://github.com/t03935924/myrepo\",\n    \"description\": \"this is a repo\",\n    \"fork\": false,\n    \"url\": \"https://api.github.com/repos/t03935924/myrepo\",\n    \"forks_url\": \"https://api.github.com/repos/t03935924/myrepo/forks\",\n    \"keys_url\": \"https://api.github.com/repos/t03935924/myrepo/keys{/key_id}\",\n    \"collaborators_url\": \"https://api.github.com/repos/t03935924/myrepo/collaborators{/collaborator}\",\n    \"teams_url\": \"https://api.github.com/repos/t03935924/myrepo/teams\",\n    \"hooks_url\": \"https://api.github.com/repos/t03935924/myrepo/hooks\",\n    \"issue_events_url\": \"https://api.github.com/repos/t03935924/myrepo/issues/events{/number}\",\n    \"events_url\": \"https://api.github.com/repos/t03935924/myrepo/events\",\n    \"assignees_url\": \"https://api.github.com/repos/t03935924/myrepo/assignees{/user}\",\n    \"branches_url\": \"https://api.github.com/repos/t03935924/myrepo/branches{/branch}\",\n    \"tags_url\": \"https://api.github.com/repos/t03935924/myrepo/tags\",\n    \"blobs_url\": \"https://api.github.com/repos/t03935924/myrepo/git/blobs{/sha}\",\n    \"git_tags_url\": \"https://api.github.com/repos/t03935924/myrepo/git/tags{/sha}\",\n    \"git_refs_url\": \"https://api.github.com/repos/t03935924/myrepo/git/refs{/sha}\",\n    \"trees_url\": \"https://api.github.com/repos/t03935924/myrepo/git/trees{/sha}\",\n    \"statuses_url\": \"https://api.github.com/repos/t03935924/myrepo/statuses/{sha}\",\n    \"languages_url\": \"https://api.github.com/repos/t03935924/myrepo/languages\",\n    \"stargazers_url\": \"https://api.github.com/repos/t03935924/myrepo/stargazers\",\n    \"contributors_url\": \"https://api.github.com/repos/t03935924/myrepo/contributors\",\n    \"subscribers_url\": \"https://api.github.com/repos/t03935924/myrepo/subscribers\",\n    \"subscription_url\": \"https://api.github.com/repos/t03935924/myrepo/subscription\",\n    \"commits_url\": \"https://api.github.com/repos/t03935924/myrepo/commits{/sha}\",\n    \"git_commits_url\": \"https://api.github.com/repos/t03935924/myrepo/git/commits{/sha}\",\n    \"comments_url\": \"https://api.github.com/repos/t03935924/myrepo/comments{/number}\",\n    \"issue_comment_url\": \"https://api.github.com/repos/t03935924/myrepo/issues/comments{/number}\",\n    \"contents_url\": \"https://api.github.com/repos/t03935924/myrepo/contents/{+path}\",\n    \"compare_url\": \"https://api.github.com/repos/t03935924/myrepo/compare/{base}...{head}\",\n    \"merges_url\": \"https://api.github.com/repos/t03935924/myrepo/merges\",\n    \"archive_url\": \"https://api.github.com/repos/t03935924/myrepo/{archive_format}{/ref}\",\n    \"downloads_url\": \"https://api.github.com/repos/t03935924/myrepo/downloads\",\n    \"issues_url\": \"https://api.github.com/repos/t03935924/myrepo/issues{/number}\",\n    \"pulls_url\": \"https://api.github.com/repos/t03935924/myrepo/pulls{/number}\",\n    \"milestones_url\": \"https://api.github.com/repos/t03935924/myrepo/milestones{/number}\",\n    \"notifications_url\": \"https://api.github.com/repos/t03935924/myrepo/notifications{?since,all,participating}\",\n    \"labels_url\": \"https://api.github.com/repos/t03935924/myrepo/labels{/name}\",\n    \"releases_url\": \"https://api.github.com/repos/t03935924/myrepo/releases{/id}\",\n    \"deployments_url\": \"https://api.github.com/repos/t03935924/myrepo/deployments\",\n    \"created_at\": \"2021-03-02T22:22:12Z\",\n    \"updated_at\": \"2021-03-02T23:12:53Z\",\n    \"pushed_at\": \"2021-03-02T22:22:13Z\",\n    \"git_url\": \"git://github.com/t03935924/myrepo.git\",\n    \"ssh_url\": \"git@github.com:t03935924/myrepo.git\",\n    \"clone_url\": \"https://github.com/t03935924/myrepo.git\",\n    \"svn_url\": \"https://github.com/t03935924/myrepo\",\n    \"homepage\": null,\n    \"size\": 0,\n    \"stargazers_count\": 0,\n    \"watchers_count\": 0,\n    \"language\": null,\n    \"has_issues\": true,\n    \"has_projects\": true,\n    \"has_downloads\": true,\n    \"has_wiki\": true,\n    \"has_pages\": false,\n    \"forks_count\": 0,\n    \"mirror_url\": null,\n    \"archived\": false,\n    \"disabled\": false,\n    \"open_issues_count\": 0,\n    \"license\": null,\n    \"forks\": 0,\n    \"open_issues\": 0,\n    \"watchers\": 0,\n    \"default_branch\": \"main\",\n    \"permissions\": {\n        \"admin\": true,\n        \"push\": true,\n        \"pull\": true\n    },\n    \"allow_squash_merge\": true,\n    \"allow_merge_commit\": true,\n    \"allow_rebase_merge\": true,\n    \"delete_branch_on_merge\": false,\n    \"network_count\": 0,\n    \"subscribers_count\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Update repository topics",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"names\": [\"ruby\", \"refactoring\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/repos/myrepo/topics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repos",
+						"myrepo",
+						"topics"
+					]
+				},
+				"description": "API endpoint to update the topics for a repository\n> A successfull request returns *HTTP 200* status code"
+			},
+			"response": [
+				{
+					"name": "Update repository topics example",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"names\": [\"ruby\", \"refactoring\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/repos/myrepo/topics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repos",
+								"myrepo",
+								"topics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4d81234a497b248d830299844733f85c\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "fbc7ef32-c89b-42b3-a2e6-a7d4770d7868"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.752255"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"names\": [\n        \"ruby\",\n        \"refactoring\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Enable security alerts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/repos/myrepo/vulnerability-alerts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repos",
+						"myrepo",
+						"vulnerability-alerts"
+					]
+				},
+				"description": "API endpoint to enable security alerts for a repository.\n> A successful request returns a *HTTP 204* status code with an empty body."
+			},
+			"response": [
+				{
+					"name": "Enable security alerts example",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/repos/myrepo/vulnerability-alerts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repos",
+								"myrepo",
+								"vulnerability-alerts"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "00548b62-7369-4282-929d-46f92797ea86"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.482671"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Delete a repo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/repos/myrepo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"repos",
+						"myrepo"
+					]
+				},
+				"description": "API endpoint to delete a repo.\n> A successful request returns *HTTP 204* status code with a blank body.\n\n> If the repo name is invalid then it returns *HTTP 404* status code and the body contains the error message."
+			},
+			"response": [
+				{
+					"name": "Delete a repo example",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/repos/myrepo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"repos",
+								"myrepo"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "89c29997-fa94-4573-8e08-1b5eb0b139cf"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.512579"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
