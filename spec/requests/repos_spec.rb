@@ -105,4 +105,37 @@ RSpec.describe 'Repos API', type: :request do
         end 
     end
 
+    describe 'PATCH /repos/:id' do
+        context 'with valid params' do
+            before do
+                VCR.use_cassette("update_repo_valid_params") do
+                    patch '/repos/testrepo', :params => {:name => 'myrepo', :description => 'This is my repo.'} 
+                end
+            end
+
+            it 'returns http status code 200' do
+                expect(response).to have_http_status(200)
+            end
+
+            it 'returns information about the updated repo' do
+                expect(json).not_to be_empty
+                expect(json['name']).to eq('myrepo')
+                expect(json['description']).to eq('This is my repo.')
+            end
+        end
+
+        context 'with invalid parameters' do
+            before do
+                VCR.use_cassette("update_repo_invalid_params") do
+                    patch '/repos/myrepo', :params => {:private => true}
+                end
+            end
+
+            it 'does not change the value of that parameter in the repo' do
+                expect(json).not_to be_empty
+                expect(json['private']).to be false
+            end
+        end
+    end
+
 end

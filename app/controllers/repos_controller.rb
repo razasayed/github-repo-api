@@ -15,9 +15,17 @@ class ReposController < ApplicationController
         json_response(GithubManager::RepoVulnerabilityAlertsEnabler.call(params[:id]))
     end
 
+    def update
+        json_response(GithubManager::RepoUpdater.call(params[:id], update_repo_params))
+    end
+
     private
 
     def create_repo_params
         params.permit(:name, :private) # Can whitelist more based on requirement
+    end
+
+    def update_repo_params
+        params.permit(:name, :description)
     end
 end

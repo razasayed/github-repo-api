@@ -1,0 +1,79 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.github.com/repos/t03935924/myrepo
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - Basic dDAzOTM1OTI0OjZjNGMyNGI4OTY4ZjUxZDRkOTg1MWY1OTQ2ZTVjNTQzYzE0M2FhOTY=
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Tue, 02 Mar 2021 19:58:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding, Accept, X-Requested-With
+      Etag:
+      - W/"636ad76a4060637d24efe5c11f80f2243e06dac6d4267ff718ba9ee1904c8f81"
+      X-Oauth-Scopes:
+      - admin:enterprise, admin:gpg_key, admin:org, admin:org_hook, admin:public_key,
+        admin:repo_hook, delete:packages, delete_repo, gist, notifications, repo,
+        user, workflow, write:discussion, write:packages
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4986'
+      X-Ratelimit-Reset:
+      - '1614716153'
+      X-Ratelimit-Used:
+      - '14'
+      Access-Control-Expose-Headers:
+      - ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining,
+        X-RateLimit-Used, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes,
+        X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Frame-Options:
+      - deny
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Referrer-Policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      Content-Security-Policy:
+      - default-src 'none'
+      X-Github-Request-Id:
+      - DB56:1673:5B5CD:6AE0A:603E98DA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":343892312,"node_id":"MDEwOlJlcG9zaXRvcnkzNDM4OTIzMTI=","name":"myrepo","full_name":"t03935924/myrepo","private":false,"owner":{"login":"t03935924","id":79847684,"node_id":"MDQ6VXNlcjc5ODQ3Njg0","avatar_url":"https://avatars.githubusercontent.com/u/79847684?v=4","gravatar_id":"","url":"https://api.github.com/users/t03935924","html_url":"https://github.com/t03935924","followers_url":"https://api.github.com/users/t03935924/followers","following_url":"https://api.github.com/users/t03935924/following{/other_user}","gists_url":"https://api.github.com/users/t03935924/gists{/gist_id}","starred_url":"https://api.github.com/users/t03935924/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/t03935924/subscriptions","organizations_url":"https://api.github.com/users/t03935924/orgs","repos_url":"https://api.github.com/users/t03935924/repos","events_url":"https://api.github.com/users/t03935924/events{/privacy}","received_events_url":"https://api.github.com/users/t03935924/received_events","type":"User","site_admin":false},"html_url":"https://github.com/t03935924/myrepo","description":"This
+        is my repo.","fork":false,"url":"https://api.github.com/repos/t03935924/myrepo","forks_url":"https://api.github.com/repos/t03935924/myrepo/forks","keys_url":"https://api.github.com/repos/t03935924/myrepo/keys{/key_id}","collaborators_url":"https://api.github.com/repos/t03935924/myrepo/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/t03935924/myrepo/teams","hooks_url":"https://api.github.com/repos/t03935924/myrepo/hooks","issue_events_url":"https://api.github.com/repos/t03935924/myrepo/issues/events{/number}","events_url":"https://api.github.com/repos/t03935924/myrepo/events","assignees_url":"https://api.github.com/repos/t03935924/myrepo/assignees{/user}","branches_url":"https://api.github.com/repos/t03935924/myrepo/branches{/branch}","tags_url":"https://api.github.com/repos/t03935924/myrepo/tags","blobs_url":"https://api.github.com/repos/t03935924/myrepo/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/t03935924/myrepo/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/t03935924/myrepo/git/refs{/sha}","trees_url":"https://api.github.com/repos/t03935924/myrepo/git/trees{/sha}","statuses_url":"https://api.github.com/repos/t03935924/myrepo/statuses/{sha}","languages_url":"https://api.github.com/repos/t03935924/myrepo/languages","stargazers_url":"https://api.github.com/repos/t03935924/myrepo/stargazers","contributors_url":"https://api.github.com/repos/t03935924/myrepo/contributors","subscribers_url":"https://api.github.com/repos/t03935924/myrepo/subscribers","subscription_url":"https://api.github.com/repos/t03935924/myrepo/subscription","commits_url":"https://api.github.com/repos/t03935924/myrepo/commits{/sha}","git_commits_url":"https://api.github.com/repos/t03935924/myrepo/git/commits{/sha}","comments_url":"https://api.github.com/repos/t03935924/myrepo/comments{/number}","issue_comment_url":"https://api.github.com/repos/t03935924/myrepo/issues/comments{/number}","contents_url":"https://api.github.com/repos/t03935924/myrepo/contents/{+path}","compare_url":"https://api.github.com/repos/t03935924/myrepo/compare/{base}...{head}","merges_url":"https://api.github.com/repos/t03935924/myrepo/merges","archive_url":"https://api.github.com/repos/t03935924/myrepo/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/t03935924/myrepo/downloads","issues_url":"https://api.github.com/repos/t03935924/myrepo/issues{/number}","pulls_url":"https://api.github.com/repos/t03935924/myrepo/pulls{/number}","milestones_url":"https://api.github.com/repos/t03935924/myrepo/milestones{/number}","notifications_url":"https://api.github.com/repos/t03935924/myrepo/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/t03935924/myrepo/labels{/name}","releases_url":"https://api.github.com/repos/t03935924/myrepo/releases{/id}","deployments_url":"https://api.github.com/repos/t03935924/myrepo/deployments","created_at":"2021-03-02T19:42:12Z","updated_at":"2021-03-02T19:50:41Z","pushed_at":"2021-03-02T19:42:13Z","git_url":"git://github.com/t03935924/myrepo.git","ssh_url":"git@github.com:t03935924/myrepo.git","clone_url":"https://github.com/t03935924/myrepo.git","svn_url":"https://github.com/t03935924/myrepo","homepage":null,"size":0,"stargazers_count":0,"watchers_count":0,"language":null,"has_issues":true,"has_projects":true,"has_downloads":true,"has_wiki":true,"has_pages":false,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":null,"forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"push":true,"pull":true},"allow_squash_merge":true,"allow_merge_commit":true,"allow_rebase_merge":true,"delete_branch_on_merge":false,"network_count":0,"subscribers_count":1}'
+  recorded_at: Tue, 02 Mar 2021 19:58:19 GMT
+recorded_with: VCR 6.0.0
