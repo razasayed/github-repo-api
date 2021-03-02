@@ -11,6 +11,10 @@ class ReposController < ApplicationController
         json_response(GithubManager::RepoDeleter.call(params[:id]))
     end
 
+    def vulnerability_alerts
+        json_response(GithubManager::RepoVulnerabilityAlertsEnabler.call(params[:id]))
+    end
+
     private
 
     def create_repo_params

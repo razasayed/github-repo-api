@@ -88,4 +88,21 @@ RSpec.describe 'Repos API', type: :request do
             end 
         end
     end
+
+    describe 'PUT /repos/:id/vulnerability-alerts' do
+        before do
+            VCR.use_cassette("enable_vulnerability_alerts") do
+                put '/repos/testrepo/vulnerability-alerts'
+            end
+        end
+
+        it 'returns http status code 204' do
+            expect(response).to have_http_status(204)
+        end
+
+        it 'returns an empty response' do
+            expect(response.body).to be_empty
+        end 
+    end
+
 end
