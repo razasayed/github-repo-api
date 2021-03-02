@@ -1,9 +1,7 @@
 module GithubManager
-    class RepoDeleter < ApplicationService
+    class RepoDeleter < RepoService
         def initialize(repo_name)
-            @base_url = ENV['GITHUB_API_BASE_URL']
-            @username = ENV['GITHUB_USERNAME']
-            @password = ENV['GITHUB_ACCESS_TOKEN']
+            super()
             @repo_name = repo_name
         end
 

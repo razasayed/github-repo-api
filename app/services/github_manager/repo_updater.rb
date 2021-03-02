@@ -1,9 +1,7 @@
 module GithubManager
-    class RepoUpdater < ApplicationService
+    class RepoUpdater < RepoService
         def initialize(repo_name, update_repo_params)
-            @base_url = ENV['GITHUB_API_BASE_URL']
-            @username = ENV['GITHUB_USERNAME']
-            @password = ENV['GITHUB_ACCESS_TOKEN']
+            super()
             @repo_name = repo_name
             @update_repo_params = update_repo_params
         end

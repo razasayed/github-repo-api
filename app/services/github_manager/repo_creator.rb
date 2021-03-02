@@ -1,9 +1,7 @@
 module GithubManager
-    class RepoCreator < ApplicationService
+    class RepoCreator < RepoService
         def initialize(new_repo_params)
-            @base_url = ENV['GITHUB_API_BASE_URL']
-            @username = ENV['GITHUB_USERNAME']
-            @password = ENV['GITHUB_ACCESS_TOKEN']
+            super()
             @new_repo_params = new_repo_params
         end
 

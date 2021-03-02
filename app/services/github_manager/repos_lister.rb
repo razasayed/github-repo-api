@@ -1,11 +1,9 @@
 module GithubManager
-    class ReposLister < ApplicationService
+    class ReposLister < RepoService
         def initialize
-            @base_url = ENV['GITHUB_API_BASE_URL']
-            @username = ENV['GITHUB_USERNAME']
-            @password = ENV['GITHUB_ACCESS_TOKEN']
+            super()
         end
-
+        
         def call
             HTTParty.get("#{@base_url}/user/repos", :basic_auth => {:username => @username , :password => @password })
         end
